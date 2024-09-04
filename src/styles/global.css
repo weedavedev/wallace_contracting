@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.karla {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding: 0 15px;
+    align-content: center;
+    /*height: 100vh;*/
+    background-color: #f0f0f0;
+}
+
+.main {
+    flex: 1; /* Grow to fill available space */
+    display: flex; /* Use flexbox for the main section too */
+    flex-direction: column; /* Set direction to column */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+p, h1, h2, h4 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+h1 {
+    @apply text-4xl font-light;
+}
+
+h2 {
+    @apply text-3xl font-light;
+}
+h3 {
+    @apply text-2xl font-medium;
+}
+h4 {
+    @apply text-2xl font-medium;
+}
+
+p {
+    @apply text-base font-light;
+}
+
+.social_container {
+    padding-top: 15px;
+    /*height:20vh;*/
+    display: flex;               /* Set to flexbox */
+    flex-direction: row;      /* Stacking items vertically */
+}
+
+img.socials {
+    /*width: 25%;*/
+    padding: 0 5%;
+    max-height: 100px;
+}
+
+img.socials:hover {
+    transform: translateY(-5px); /* Lift the box up slightly on hover */
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 0 5px;
+    }
+}
+

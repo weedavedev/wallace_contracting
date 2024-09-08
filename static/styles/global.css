@@ -80,19 +80,10 @@ img.socials:hover {
     transform: translateY(-5px); /* Lift the box up slightly on hover */
 }
 
-
-.two-column-layout {
-    @apply grid grid-cols-2 gap-4;
-}
-
-
 @media (max-width: 768px) {
     body {
         width: 100%;
         padding: 0 5px;
-    }
-    .two-column-layout {
-        @apply grid grid-cols-1 gap-2;
     }
 }
 

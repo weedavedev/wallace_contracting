@@ -37,6 +37,30 @@ a {
     text-decoration: none;
 }
 
+.menu-link {
+    @apply block text-white hover:bg-gray-700 px-4 py-2 rounded;
+}
+
+.dropdown {
+    @apply absolute left-0 hidden bg-gray-800 shadow-lg;
+}
+
+.group_hover_show {
+    @apply group-hover:block;
+}
+
+.menu-bg {
+    @apply bg-gray-800;
+}
+
+.menu-toggle {
+    @apply text-white md:hidden;
+}
+
+.logo {
+    @apply text-white text-lg font-bold;
+}
+
 
 p, h1, h2, h4 {
     font-family: "Karla", sans-serif;

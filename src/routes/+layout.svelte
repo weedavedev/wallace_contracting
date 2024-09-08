@@ -1,8 +1,8 @@
 <script>
     import '../styles/global.css';
     import {onMount} from 'svelte';
-    import Navbar from '../lib/NavBar.svelte';
     import Footer from '../lib/Footer.svelte';
+    import NavBar from "$lib/NavBar.svelte";
 
     let isLargeScreen = false;
     const checkScreenSize = () => {
@@ -30,7 +30,7 @@
 <!--    <meta name="description" content={metadata.description}>-->
 </head>
 <div class="main">
-    <Navbar/>
+    <NavBar/>
 
     <div class="current_page_content">
         <slot/>

@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
     content: ['./src/**/*.{html,svelte,js}'],
     theme: {
         extend: {
             colors: {
                 space: '#48b93f',
-            }
+            },
         },
     },
     plugins: [],

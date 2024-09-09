@@ -1,4 +1,3 @@
-<!-- src/routes/Navbar.svelte -->
 <script>
     import {base} from '$app/paths';
     import {afterUpdate} from "svelte";
@@ -9,10 +8,6 @@
     }); // For debugging
 
     let isOpen = false; // Controls whether the mobile menu is open
-
-    let hover = false;
-    let show = true;
-    let group = 'navGroup';
 </script>
 
 <nav class="menu-bg p-4 relative">
@@ -38,9 +33,10 @@
 
     <ul class={`md:flex md:space-x-4 mt-4 md:mt-0 ${isOpen ? 'block' : 'hidden'} absolute md:static menu-bg w-full`}>
         <li><a href="/home" on:click|preventDefault={() => goto('/home')} class="menu-link">HOME</a></li>
+
         <li class="relative group">
             <a href="/fencing" class="menu-link">FENCING</a>
-            <ul class={`dropdown ${group-hover-show}`}>
+            <ul class={`dropdown group-hover:block`}>
                 <li>
                     <a href="/fencing#stock" on:click|preventDefault={() => goto('/fencing/#stock')} class="menu-link">Stock
                         Fence</a>
@@ -55,7 +51,7 @@
         <li class="relative group">
             <a href="/site_clearance" on:click|preventDefault={() => goto('/site_clearance')} class="menu-link">SITE
                 CLEARANCE</a>
-            <ul class={`dropdown ${group-hover-show}`}>
+            <ul class={`dropdown group-hover:block`}>
                 <li>
                     <a href="/site_clearance#dangerous"
                        on:click|preventDefault={() => goto('/site_clearance#dangerous')} class="menu-link">Dangerous
@@ -67,18 +63,7 @@
                 </li>
             </ul>
         </li>
-        <li>
-            <a href="/contact" class="menu-link">CONTACT</a>
-        </li>
+
+        <li><a href="/contact" class="menu-link">CONTACT</a></li>
     </ul>
 </nav>
-
-<style>
-    /* Prevent default hover behavior on mobile */
-    @media (hover: none) {
-        .group:hover > .hidden {
-            display: none; /* Disable hover on touch devices */
-        }
-    }
-</style>
-

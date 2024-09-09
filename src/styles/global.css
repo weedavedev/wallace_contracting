@@ -36,17 +36,28 @@ body {
 a {
     text-decoration: none;
 }
-
 .menu-link {
     @apply block text-white hover:bg-gray-700 px-4 py-2 rounded;
 }
 
 .dropdown {
-    @apply absolute left-0 hidden bg-gray-800 shadow-lg;
+    @apply absolute left-0 hidden bg-gray-800 shadow-lg whitespace-nowrap;
+    /* Keep dropdown items on one line */
 }
 
-.group_hover_show {
-    @apply group-hover:block;
+.group:hover .dropdown {
+    @apply block;
+    /* Show dropdown on hover */
+}
+
+.dropdown li {
+    @apply inline;
+    /* Change to inline to keep items on the same line */
+}
+
+.dropdown a {
+    @apply block whitespace-nowrap;
+    /* Prevent individual titles from wrapping */
 }
 
 .menu-bg {
@@ -60,7 +71,6 @@ a {
 .logo {
     @apply text-white text-lg font-bold;
 }
-
 
 p, h1, h2, h4 {
     font-family: "Karla", sans-serif;
